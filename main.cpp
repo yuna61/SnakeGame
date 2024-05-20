@@ -249,7 +249,7 @@ int main() {
         if (food.foodId == 6 && (snake.head.x == food.foodPosX && snake.head.y == food.foodPosY)) {
             // 뱀의 머리랑 반대로사과랑 부딪히면(== 뱀의 머리랑 반대로사과의 위치가 같으면)
             // 뱀의 머리와 꼬리 위치 바뀜. 동시에 진행 방향이 바뀐다.
-            snake.snakeTouchChangeApple(snake.head.x,snake.head.y,&snake);
+            snake.snakeTouchChangeApple(&snake);
         }
 
         if (snake.snakeSize < 3) {

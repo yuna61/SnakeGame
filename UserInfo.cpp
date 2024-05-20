@@ -81,9 +81,6 @@ public:
     }
 
     // 게이트 사용 관련
-    int getGateUse() {
-        return GateUseC;
-    }
     void setGateUse(const int current_C) {
         this->GateUseC = current_C;
     }

@@ -251,7 +251,7 @@ public:
 		body.pop_back();
 	}
 	// 먹으면 머리랑 꼬리 위치 변경, 진행 방향 반대로 변경 (꼬리 방향x, 머리 방향과 반대)
-	void snakeTouchChangeApple(int x, int y, Snake* snake) {
+	void snakeTouchChangeApple(Snake* snake) {
 		
 		
 		tempTailX = body.back().x;
@@ -260,9 +260,10 @@ public:
 		// head 먼저 움직이기..
 		int prevX = head.x;
 		int prevY = head.y;
-		head.teleportMove(tempTailX, tempTailY);
+		teleportMove(tempTailX, tempTailY);
 		body.back().x = prevX;
 		body.back().y = prevY;
+		removeTail();
 		
 
 		if (currDir == RIGHT) {
